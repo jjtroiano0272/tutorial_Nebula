@@ -1,5 +1,5 @@
 /* TODO: What's this guy for!? */
-@import url("https://use.typekit.net/jmk3xov.css");
+@import url('https://use.typekit.net/jmk3xov.css');
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -11,11 +11,11 @@
 }
 
 canvas {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
 }
-
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.95);
@@ -35,12 +35,15 @@ main {
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
+  left: 10rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
+h1,
+h2,
+h3,
+blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -50,9 +53,8 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
 }
-
-
 
 header {
   background: var(--dark-bg);
@@ -88,4 +90,35 @@ blockquote p {
 
 .left {
   grid-column: 6 / 12;
+}
+
+.container {
+  z-index: 100;
+}
+
+.profile-text {
+  bottom: 0%;
+  margin-left: 25%;
+  position: absolute;
+}
+
+a.profile-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 100vw;
+    color: white;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding: 120px 0px;
+    left: 3rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
